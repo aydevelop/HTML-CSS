@@ -13,8 +13,8 @@
   <title>Bootstrap Theme</title>
 </head>
 
-<body>
-  <div class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+<body data-spy="scroll" data-target="#main-nav" id="home">
+  <div class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="main-nav">
     <div class="container">
       <a href="#" class="navbar-brand">SiteTitle</a>
 
@@ -28,13 +28,16 @@
             <a href="#home" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#link1" class="nav-link">Link1</a>
+            <a href="#explore-head-section" class="nav-link">Link1</a>
           </li>
           <li class="nav-item">
-            <a href="#link2" class="nav-link">Link2</a>
+            <a href="#explore-section" class="nav-link">Link2</a>
           </li>
           <li class="nav-item">
-            <a href="#link3" class="nav-link">Link3</a>
+            <a href="#create-head-section" class="nav-link">Link3</a>
+          </li>
+          <li class="nav-item">
+            <a href="#create-section" class="nav-link">Link4</a>
           </li>
         </ul>
       </div>
@@ -278,6 +281,22 @@
     crossorigin="anonymous"></script>
   <script>
     $('#year').text(new Date().getFullYear());
+    $('body').scrollspy({target: '#main-nav'});
+
+    $('#main-nav a').on('click', function(event){
+      if(this.hash !== ""){
+        event.preventDefault();
+        const hash = this.hash;
+        let top = $(hash).offset().top;
+
+        $('html, body').animate({
+          scrollTop: top 
+        }, 800, function(){
+          window.location.hash = hash;
+        })
+      }
+    });
+
   </script>
 </body>
 </html>
