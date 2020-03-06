@@ -60,3 +60,7 @@
 #video-play a{
     color: white;
 }
+
+body{
+    overflow-x: hidden;
+}
