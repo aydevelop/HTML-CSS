@@ -148,7 +148,7 @@
             <h1>
               Fusce vel lorem sed magna dapibus fermentum
             </h1>
-            <p class="d-none d-md-block">
+            <p class="d-none d-lg-block">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati suscipit asperiores, accusantium cupiditate error officiis iusto voluptatibus earum ipsam amet.
             </p>
           </div>
@@ -156,6 +156,62 @@
       </div>
     </div>
   </section>
+
+  <section id="info" class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 align-self-center">
+          <h3>
+            Lorem ipsum dolor
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam expedita tempora id quidem omnis nulla iure illo, quis enim laborum neque vitae fugiat adipisci exercitationem obcaecati quos beatae est?
+          </p>
+          <a href="#" class="btn btn-outline-danger btn-lg">Learn More</a>
+        </div>
+        <div class="col-md-6">
+          <img src="img/laptop.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="video-play">
+    <div class="dark-overlay">
+      <div class="row">
+        <div class="col">
+          <div class="container p-5">
+            <a href="#" class="video" 
+            data-toggle="modal"
+            data-target="#videoModal"
+            data-video="https://www.youtube.com/embed/HnwsG9a5riA">
+            <i class="fas fa-play fa-3x"></i>
+          </a>
+          <h1>See more</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="videoModal">
+    <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-body">
+           <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+           </button>
+           <iframe 
+              allowfullscreen 
+              src="" 
+              frameborder="0" 
+              height="350" 
+              width="100%">
+           </iframe>
+         </div>
+       </div>
+    </div>
+  </div>
  
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
@@ -166,6 +222,18 @@
 
   <script>
     $('#year').text(new Date().getFullYear());
+
+    $(function () {
+      $(".video").click(function () {
+        var theModal = $(this).data("target"),
+          videoSRC = $(this).attr("data-video"),
+          videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+        $(theModal + ' iframe').attr('src', videoSRCauto);
+        $(theModal + ' button.close').click(function () {
+          $(theModal + ' iframe').attr('src', videoSRC);
+        });
+      });
+    });
   </script>
 </body>
 
