@@ -14,9 +14,102 @@
 </head>
 
 <body>
-  <!-- START HERE -->
+  
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        SiteTitle
+      </a>
+
+      <button data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggler">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-white" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+  </nav>
+
+  <section id="showcase">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item carousel-image-1 active">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block text-right mb-5">
+              <h1 class="display-3">
+                Lorem ipsum dolor
+              </h1>
+              <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est reprehenderit rerum cumque veritatis nihil dolore, amet quas maxime consequatur et delectus blanditiis, in soluta earum dolorum! Numquam consequatur error sed.</p>
+              <a href="#" class="btn btn-danger btn-lg">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item carousel-image-2">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block text-right mb-5">
+              <h1 class="display-3">
+                Est reprehenderit rerum cumque
+              </h1>
+              <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est reprehenderit rerum cumque veritatis nihil dolore, amet quas maxime consequatur et delectus blanditiis, in soluta earum dolorum! Numquam consequatur error sed.</p>
+              <a href="#" class="btn btn-primary btn-lg">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item carousel-image-3">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block text-right mb-5">
+              <h1 class="display-3">
+                Numquam consequatur error sed
+              </h1>
+              <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est reprehenderit rerum cumque veritatis nihil dolore, amet quas maxime consequatur et delectus blanditiis, in soluta earum dolorum! Numquam consequatur error sed.</p>
+              <a href="#" class="btn btn-success btn-lg">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a href="#myCarousel" data-slide="next" class="carousel-control-next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
 
 
+
+    </div>
+  </section>
+  
+ 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
