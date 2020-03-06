@@ -156,6 +156,60 @@
 
  <!-- ------------------------------------------------------------ -->
 
+  <section id="testimonials" class="p-4 bg-dark text-white">
+    <div class="container">
+        <h2 class="text-center">
+            Testimonials
+        </h2>
+        <div class="row text-center">
+            <div class="col">
+                <div class="slider">
+                    <div>
+                        <blockquote class="blockquote">
+                            <p class="mb-0">
+                                Mauris ultrices eros in cursus turpis massa. Feugiat vivamus at augue eget.
+                            </p>
+                            <footer class="blockquote-footer">
+                                John Doe From
+                                <cite title="Company 1">
+                                    Company 1
+                                </cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                    <div>
+                        <blockquote class="blockquote">
+                            <p class="mb-0">
+                                Bibendum est ultricies integer quis auctor elit sed. Et malesuada fames ac turpis egestas.
+                            </p>
+                            <footer class="blockquote-footer">
+                                John Doe From
+                                <cite title="Company 1">
+                                    Company 2
+                                </cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                    <div>
+                        <blockquote class="blockquote">
+                            <p class="mb-0">
+                                Nulla aliquet enim tortor at auctor. Fermentum et sollicitudin ac orci phasellus.
+                            </p>
+                            <footer class="blockquote-footer">
+                                John Doe From
+                                <cite title="Company 1">
+                                    Company 3
+                                </cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+ <!-- ------------------------------------------------------------ -->
  
   <footer id="main-footer" class="text-center p-4">
     <div class="container">
@@ -178,6 +232,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
   <script>
     $('#year').text(new Date().getFullYear());
+
+    $('.slider').slick({
+        infinite: true,
+        slideToShow: 1,
+        slideToScroll: 1
+    });
   </script>
 </body>
 
