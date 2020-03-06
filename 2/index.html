@@ -13,9 +13,8 @@
   <title>Bootstrap Theme</title>
 </head>
 
-<body>
-
-  <nav class="navbar navbar-expand-md navbar-light fixed-top py-4">
+<body id="home" data-spy="scroll" data-target="#main-nav">
+  <nav id="main-nav" class="navbar navbar-expand-md navbar-light fixed-top py-4">
     <div class="container">
       <a href="#home" class="navbar-brand">
         <img src="img/mlogo.png" width="50" height="50" alt="" >
@@ -42,15 +41,13 @@
             <a href="#authors" class="nav-link">Authors</a>
           </li>
           <li class="nav-item">
-            <a href="#home" class="nav-link">Contact</a>
+            <a href="#contact" class="nav-link">Contact</a>
           </li>
         </ul>
       </div>
 
     </div>
   </nav> 
-
-
 
   <section id="showcase" class="py-5" >
     <div class="primary-overlay text-white">
@@ -391,6 +388,18 @@
     </div>
   </section>
 
+  <footer id="main-footer" class="py-4 bg-primary text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-6 ml-auto">
+          <p class="lead">
+            Copyright &copy; <span id="year"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -401,6 +410,25 @@
   <script>
     // Get the current year for the copyright
     $('#year').text(new Date().getFullYear());
+
+    $('body').scrollspy({target: '#main-nav'});
+
+    $('#main-nav a').on('click', function(event){
+      if(this.hash !== ""){
+        event.preventDefault();
+        const hash = this.hash;
+        let top = $(hash).offset().top;
+
+        $('html, body').animate({
+          scrollTop: top 
+        }, 800, function(){
+          window.location.hash = hash;
+        })
+      }
+    });
+
+
+
   </script>
 </body>
 
