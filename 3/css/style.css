@@ -74,3 +74,17 @@ body{
     padding-top: 15px;
     background-position: 0 -400px;
 }
+
+#faq .card{
+    border: #444;
+}
+
+#faq{
+    color: white !important;
+    text-decoration: none;
+}
+
+#faq .card-body,
+#faq .card-header{
+    background: #333;
+}
